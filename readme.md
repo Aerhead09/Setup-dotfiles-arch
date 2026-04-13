@@ -4,7 +4,7 @@ i quite like uma musume, personally Manhattan Cafe, but today i not quite fond w
 Manhattan cafe and i switching to Aston Machan.
 
 ## 📸 Preview
-![Screenshot](~/Wallpapers/Cafe000.png)
+![Screenshot](/Wallpapers/Cafe000.png)
 
 ---
 
