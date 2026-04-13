@@ -1,0 +1,45 @@
+[global]
+    # --- POSISI & UKURAN ---
+    origin = top-left             # Posisi di Kiri Atas
+    offset = (20,20)                # Jarak dari pinggir layar (x,y)
+    width = 300                   # Lebar notifikasi
+    height = (0, 300)                  # Tinggi maksimum
+    notification_limit = 5        # Maksimal notif yang numpuk
+
+    # --- TAMPILAN ---
+    font = JetBrains Mono Nerd Font 10
+    frame_width = 2               # Tebal garis pinggir
+    frame_color = "#cdd6f4"       # Warna garis pinggir (Putih tulang)
+    corner_radius = 10            # Sudut membulat (Biar gak kotak kaku)
+    transparency = 10             # Transparansi (0-100)
+    separator_height = 2
+    padding = 10
+    horizontal_padding = 10
+    
+    # --- ICON ---
+    icon_position = left          # Icon di kiri teks
+    min_icon_size = 48
+    max_icon_size = 48
+
+    # --- PROGRESS BAR ---
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+
+[urgency_low]
+    background = "#1e1e2e"        # Warna Background Gelap
+    foreground = "#cdd6f4"        # Warna Teks Terang
+    timeout = 5                   # Hilang dalam 5 detik
+
+[urgency_normal]
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    timeout = 10                  # Hilang dalam 10 detik
+
+[urgency_critical]
+    background = "#1e1e2e"
+    foreground = "#f38ba8"        # Teks Merah muda (Warning)
+    frame_color = "#f38ba8"       # Border Merah
+    timeout = 0                   # Gak hilang sampai diklik (Penting)

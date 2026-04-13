@@ -1,0 +1,91 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    display-drun: "☕ Apps";
+    display-run: "🏃 Run";
+    display-window: "🪟 Window";
+    drun-display-format: "{icon} {name}";
+}
+
+/* --- PALET WARNA CAFE --- */
+* {
+    /* Warna Dasar */
+    bg: #1e1e2e;      /* Background Gelap */
+    bg-alt: #313244;  /* Background Pilihan */
+    fg: #cdd6f4;      /* Teks Utama Putih Tulang */
+    
+    /* Warna Aksen */
+    accent: #fab387;  /* Peach/Orange (Khas Cafe) */
+    urgent: #f38ba8;  /* Merah */
+    
+    /* Definisi yang tadi Error (Grey) */
+    grey: #6c7086;    /* Abu-abu yang dicari Rofi! */
+    
+    background-color: @bg;
+    text-color: @fg;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 35%;
+    background-color: @bg;
+    border: 2px;
+    border-color: @accent;
+    border-radius: 12px; /* Sudut melengkung */
+    padding: 20px;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @bg-alt;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0 0 15px 0;
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @accent;
+    padding: 0 10px 0 0;
+    font: "JetBrainsMono Nerd Font Bold 12";
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+    placeholder: "Search...";
+    placeholder-color: @grey; /* Menggunakan variabel grey */
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    scrollbar: false;
+}
+
+element {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: transparent;
+    text-color: @grey; /* Teks default abu-abu */
+}
+
+element selected {
+    background-color: @bg-alt;
+    text-color: @accent; /* Teks aktif jadi peach */
+}
+
+element-icon {
+    size: 24px;
+    margin: 0 10px 0 0;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}

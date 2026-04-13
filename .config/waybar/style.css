@@ -1,0 +1,101 @@
+/* --- RESET DASAR --- */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrains Mono Nerd Font", monospace;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 0;
+}
+
+/* --- BAR UTAMA (Wadah) --- */
+window#waybar {
+    /* Background layar atas transparan total, biar pulau terlihat melayang */
+    background: rgba(0, 0, 0, 0.65); 
+    color: #e6cca0;
+}
+
+/* --- TOOLTIP (Kotak info pas mouse diem) --- */
+tooltip {
+    background: #1a1a1a;
+    border: 1px solid #e6cca0; /* Border emas tipis */
+    border-radius: 10px;
+}
+tooltip label {
+    color: #e6cca0;
+}
+
+/* --- STYLE PULAU (ISLANDS) --- */
+/* Ini settingan inti biar semuanya seragam */
+
+#workspaces,
+#clock,
+#battery,
+#cpu,
+#memory,
+#backlight,
+#network,
+#bluetooth,
+#pulseaudio,
+#tray,
+#group-hardware,
+#custom-notification {
+    /* Background: Hitam Abu-abu dengan Opacity (Tembus pandang dikit) */
+    background-color: rgba(20, 20, 20, 0.85); 
+    
+    /* Warna Teks/Ikon: EMAS CAFE */
+    color: #e6cca0; 
+    
+    /* Bentuk Pulau */
+    border-radius: 15px;       
+    padding: 5px 15px;         
+    margin-top: 10px;          
+    margin-bottom: 10px;       
+    margin-right: 10px;        
+    
+    /* Border tipis biar tegas dan mewah */
+    border: 1px solid #4a4a4a; 
+}
+
+/* --- WORKSPACE SPESIAL --- */
+/* Biar indikator workspace juga ngikut tema */
+
+#workspaces button {
+    color: #666666; /* Abu-abu buat yang TIDAK aktif */
+    padding: 0 5px;
+}
+
+#workspaces button.active {
+    color: #e6cca0; /* Emas buat yang AKTIF */
+    /* Opsional: Kalo mau backgroundnya emas, uncomment bawah ini: */
+    /* background: #e6cca0; */
+    /* color: #1a1a1a; */
+}
+
+/* --- HAPUS WARNA-WARNI BAWAAN --- */
+/* Kita paksa modul baterai, wifi, dll tetep EMAS */
+
+#battery.charging, 
+#battery.plugged, 
+#network, 
+#pulseaudio,
+#backlight {
+    color: #e6cca0; /* Paksa jadi Emas */
+    background-color: rgba(20, 20, 20, 0.85); /* Paksa background tetep gelap */
+}
+
+/* Kecuali kalau Baterai KRITIS (Lowbat), baru kasih merah dikit biar sadar */
+#battery.critical:not(.charging) {
+    color: #ff5555;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+/* Animasi kedip buat lowbat */
+@keyframes blink {
+    to {
+        color: #1a1a1a;
+        background-color: #ff5555;
+    }
+}

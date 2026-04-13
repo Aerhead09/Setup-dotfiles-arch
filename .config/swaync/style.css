@@ -1,0 +1,160 @@
+/* --- MANHATTAN CAFE: TOTAL OVERHAUL V2 --- */
+
+/* 1. RESET & FONT (Wajib biar gak default) */
+* {
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free";
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* 2. WADAH UTAMA (Panel) */
+.control-center {
+    background: #0f0f12;       /* Hitam Kopi Pekat */
+    border: 2px solid #dca561; /* Border Emas Pudar */
+    border-radius: 16px;       /* Sudut membulat */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    padding: 12px;
+}
+
+/* 3. WIDGET TITLE (Header Atas) */
+.widget-title {
+    color: #dcd7ba; /* Teks Krem */
+    margin: 8px;
+}
+
+.widget-title > button {
+    background: #e46876; /* Tombol Clear Merah Kalem */
+    color: #0f0f12;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+.widget-title > button:hover {
+    background: #ff5d62; /* Merah lebih terang pas hover */
+}
+
+/* 4. TOMBOL DND (Do Not Disturb) */
+.widget-dnd {
+    background: #1f1f28; /* Abu Gelap */
+    border-radius: 12px;
+    margin: 8px;
+    padding: 8px;
+    border: 1px solid #727169; /* Border Abu Pudar */
+}
+
+/* Tombol Switch DND */
+.widget-dnd > switch {
+    background: #2d2d30;
+    border-radius: 12px;
+}
+
+.widget-dnd > switch:checked {
+    background: #dca561; /* Emas kalau ON */
+    border: 1px solid #dca561;
+}
+
+/* 5. WIDGET MUSIK (MPRIS) */
+.widget-mpris {
+    background: #1f1f28;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 8px;
+    border: 1px solid #727169;
+}
+
+.widget-mpris-title {
+    color: #dca561; /* Judul Lagu Emas */
+    font-size: 16px;
+}
+
+.widget-mpris-subtitle {
+    color: #dcd7ba; /* Artis Krem */
+    font-size: 12px;
+}
+
+/* Tombol Player (Play/Pause/Next) */
+.widget-mpris button {
+    color: #dcd7ba;
+    background: transparent;
+    border-radius: 50%; /* Tombol bulat */
+}
+
+.widget-mpris button:hover {
+    background: #2d2d30; 
+}
+
+/* 6. SLIDER VOLUME (Ini yang bikin default hilang!) */
+.widget-volume {
+    background: #1f1f28;
+    border-radius: 12px;
+    margin: 8px;
+    padding: 8px;
+    border: 1px solid #727169;
+}
+
+/* Label Angka Volume */
+.widget-volume > label {
+    color: #dcd7ba;
+}
+
+/* Rel Slider (Track) */
+scale trough {
+    min-height: 6px;
+    border-radius: 5px;
+    background-color: #2d2d30; /* Abu gelap buat track kosong */
+}
+
+/* Isi Slider (Highlight) */
+scale highlight {
+    background-image: none;
+    background-color: #dca561; /* EMAS MUTLAK */
+    border-radius: 5px;
+}
+
+/* Biji Slider (Knob) */
+scale slider {
+    background-color: #dcd7ba; /* Krem */
+    min-height: 16px;
+    min-width: 16px;
+    border-radius: 50%;
+    box-shadow: none;
+    margin: -5px;
+}
+
+/* 7. NOTIFIKASI ITEM */
+.notification {
+    background: #1f1f28;
+    border-radius: 12px;
+    margin: 6px 0;
+    padding: 10px;
+    border: 1px solid #2d2d30;
+    box-shadow: none;
+}
+
+.notification-content {
+    color: #dcd7ba;
+}
+
+.summary {
+    color: #98bb6c; /* Judul Notif Hijau Matcha */
+    font-weight: 800;
+}
+
+.time {
+    color: #727169;
+    font-size: 11px;
+}
+
+.body {
+    color: #dcd7ba;
+}
+
+/* Tombol Action di Notif */
+.notification-action { 
+    background: #2d2d30;
+    color: #dca561;
+    border: 1px solid #dca561;
+    border-radius: 6px;
+}

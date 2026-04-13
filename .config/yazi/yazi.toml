@@ -1,0 +1,26 @@
+# 1. Definisikan Opener (Alatnya)
+[opener]
+edit = [
+    { run = 'nvim "$@"', block = true, desc = "Edit", for = "unix" }
+]
+
+# 2. Definisikan Rules (Aturannya)
+[open]
+rules = [
+    # Kalau ketemu folder, masuk ke folder itu
+    { name = "*/", use = [ "edit", "open", "reveal" ] },
+
+    # Kalau ketemu file teks, pake opener 'edit' (nvim)
+    { mime = "text/*", use = [ "edit", "reveal" ] },
+    
+    # Tambahan buat file kodingan spesifik biar makin yakin
+    { name = "*.json", use = [ "edit", "reveal" ] },
+    { name = "*.toml", use = [ "edit", "reveal" ] },
+    { name = "*.md",   use = [ "edit", "reveal" ] },
+    { name = "*.py",   use = [ "edit", "reveal" ] },
+    { name = "*.cpp",  use = [ "edit", "reveal" ] },
+    { name = "*.conf", use = [ "edit", "reveal" ] },
+
+    # Fallback (Sisa file lain biarkan sistem yang atur)
+    { name = "*", use = [ "open", "reveal" ] },
+]

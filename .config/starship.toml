@@ -1,0 +1,60 @@
+# ~/.config/starship.toml
+
+scan_timeout = 1000
+
+# Jarak baris kosong antar perintah (biar lega, tidak sumpek)
+add_newline = true
+
+[character]
+success_symbol = "[☕](bold #fab387)"  # Ikon Kopi Emas
+error_symbol = "[✗](bold #f38ba8)"     # Ikon Silang Merah (kalau error)
+
+# Penunjuk Folder (Directory) - Ini yang paling sering dilihat
+[directory]
+style = "bold #e6cca0"
+format = "[ $path ]($style)"  # Ikon Gelas Kopi Panas (Nerd Font)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Penunjuk Git (Penting buat tugas kuliah/Project!)
+[git_branch]
+symbol = " "
+style = "bold #dfae8e" # Warna Tembaga
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "bold #dfae8e"
+format = "([$all_status$ahead_behind]($style) )"
+
+# Bahasa Pemrograman (Otomatis muncul cuma kalau ada file kodingannya)
+[c]
+symbol = " "
+style = "bold blue"
+format = "[$symbol($version) ]($style)"
+
+[python]
+symbol = " "
+style = "bold yellow"
+format = "[$symbol($version) ]($style)"
+
+[java]
+symbol = " "
+style = "bold red"
+format = "[$symbol($version) ]($style)"
+
+[nodejs]
+symbol = " "
+style = "bold green"
+format = "[$symbol($version) ]($style)"
+
+# Durasi (Kalau perintah jalan lama > 2 detik, dia kasih tahu berapa lama)
+[cmd_duration]
+min_time = 2000
+format = "took [$duration](bold #bac2de) "
+
+# Info Hostname (Jean@Arch) kita sembunyikan biar bersih, kecuali masuk SSH
+[username]
+show_always = false
+
+[hostname]
+ssh_only = true

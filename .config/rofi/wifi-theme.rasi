@@ -1,0 +1,31 @@
+* {
+    background-color: #0f0f12; /* Hitam Kopi */
+    text-color:       #dcd7ba; /* Krem */
+    font:            "JetBrainsMono Nerd Font 12";
+}
+window {
+    width:      30%;
+    padding:    20px;
+    border:     2px;
+    border-color: #dca561; /* Emas Pudar */
+    border-radius: 12px;
+}
+inputbar {
+    padding:    10px;
+    children:   [ prompt, entry ];
+}
+prompt, entry {
+    text-color: #dca561;
+}
+listview {
+    padding:    10px 0;
+    lines:      8;
+}
+element {
+    padding:    8px;
+    border-radius: 8px;
+}
+element selected {
+    background-color: #1f1f28; /* Abu Gelap pas dipilih */
+    text-color:       #dca561; /* Teks jadi Emas */
+}

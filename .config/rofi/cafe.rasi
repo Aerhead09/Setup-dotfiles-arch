@@ -1,0 +1,99 @@
+* {
+    /* Palet Warna Manhattan Cafe */
+    bg-col:  #1e1814;   /* Background Kopi Gelap */
+    bg-col-light: #2e2424; /* Coklat Sedikit Terang */
+    border-col: #e6cca0; /* Emas (Border) */
+    selected-col: #2e2424; /* Background Pilihan */
+    gold: #e6cca0;      /* Teks Emas */
+    fg-col: #e6cca0;    /* Teks Utama */
+    fg-col2: #f38ba8;   /* Merah pudar (buat error/dll) */
+    
+    width: 600;
+    font: "JetBrains Mono Nerd Font 11";
+}
+
+element-text, element-icon, mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    height: 360px;
+    border: 2px;
+    border-color: @border-col;
+    background-color: @bg-col;
+    border-radius: 10px;
+}
+
+mainbox {
+    background-color: @bg-col;
+}
+
+inputbar {
+    children: [prompt,entry];
+    background-color: @bg-col;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+prompt {
+    background-color: @gold;
+    padding: 6px;
+    text-color: @bg-col;
+    border-radius: 3px;
+    margin: 20px 0px 0px 20px;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+entry {
+    padding: 6px;
+    margin: 20px 0px 0px 10px;
+    text-color: @fg-col;
+    background-color: @bg-col;
+}
+
+listview {
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    margin: 10px 0px 0px 20px;
+    columns: 2;
+    lines: 5;
+    background-color: @bg-col;
+}
+
+element {
+    padding: 5px;
+    background-color: @bg-col;
+    text-color: @fg-col;
+}
+
+element-icon {
+    size: 25px;
+}
+
+element selected {
+    background-color:  @gold; /* Pas dipilih jadi Emas */
+    text-color: @bg-col;      /* Teksnya jadi gelap */
+    border-radius: 3px;
+}
+
+mode-switcher {
+    spacing: 0;
+}
+
+button {
+    padding: 10px;
+    background-color: @bg-col-light;
+    text-color: @grey;
+    vertical-align: 0.5; 
+    horizontal-align: 0.5;
+}
+
+button selected {
+    background-color: @bg-col;
+    text-color: @gold;
+}

@@ -1,0 +1,37 @@
+* {
+    background-image: none;
+    font-family: "JetBrains Mono Nerd Font", Roboto, sans-serif;
+}
+
+window {
+    background-color: rgba(30, 24, 20, 0.85); /* Coklat Gelap Transparan */
+}
+
+button {
+    color: #e6cca0;            /* Teks Emas */
+    background-color: #2e2424; /* Tombol Coklat Kopi */
+    border-style: solid;
+    border-width: 2px;
+    border-color: #e6cca0;     /* Border Emas */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+button:focus, button:active, button:hover {
+    background-color: #e6cca0; /* Pas hover jadi Emas Terang */
+    color: #3c2f2f;            /* Teks jadi gelap */
+    outline-style: none;
+}
+
+/* Mengambil ikon bawaan sistem */
+#lock { background-image: image(url("/usr/share/wlogout/icons/lock.png")); }
+#hibernate { background-image: image(url("/usr/share/wlogout/icons/hibernate.png")); }
+#logout { background-image: image(url("/usr/share/wlogout/icons/logout.png")); }
+#suspend { background-image: image(url("/usr/share/wlogout/icons/suspend.png")); }
+#shutdown { background-image: image(url("/usr/share/wlogout/icons/shutdown.png")); }
+#reboot { background-image: image(url("/usr/share/wlogout/icons/reboot.png")); }
