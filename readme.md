@@ -80,14 +80,13 @@ git clone --bare [https://github.com/Aerhead09/Setup-dotfiles-arch.git](https://
 ### 3. Checkout (Deploy Files)
 Deploy the files to your Home directory. If you encounter errors because default files (like .bashrc) already exist, use this emergency backup script:
 ```bash
-```
 mkdir -p .dotfiles-backup && \
 config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
 xargs -I{} mv {} .dotfiles-backup/{}
 # Try the checkout again after moving conflicting files
 config checkout
 ```
-```
+
 
 ### 4. Housekeeping
 Prevent Git from tracking every single file in your Home directory:
