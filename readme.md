@@ -2,15 +2,24 @@
 Welcome to my Arch Linux setup. It's nothing fancy—just a personalized environment built because I'm a fan of *Uma Musume*. I used to prefer Manhattan Cafe, but lately, I've been vibing more with Aston Machan.
 
 ## 📸 Preview
-![workspace 1](setup_wallpaper/ws1.png)
-![Workspace 2](setup_wallpaper/ws2.png)
-![workspace 3](setup_wallpaper/ws3.png)
-![rofi menu](setup_wallpaper/Rofi.png)
-use SUPER + R to use the menu.
-![wallpaper menu](setup_wallpaper/wallpaper_select.png)
-use Super + W to use the menu.
-![swaync menu](setup_wallpaper/swaync.png)
 
+![workspace 1](setup_wallpaper/ws1.png)
+*Workspace 1: Web Browsing & Default Apps*
+
+![Workspace 2](setup_wallpaper/ws2.png)
+*Workspace 2: System Monitoring (Btop)*
+
+![workspace 3](setup_wallpaper/ws3.png)
+*Workspace 3: Pixel Perfect Dev Environment*
+
+![rofi menu](setup_wallpaper/Rofi.png)
+*App Launcher - Use `SUPER + R` to open this menu.*
+
+![wallpaper menu](setup_wallpaper/wallpaper_select.png)
+*Wallpaper Picker - Use `SUPER + W` to change the vibe.*
+
+![swaync menu](setup_wallpaper/swaync.png)
+*Notification Center & Quick Settings (Swaync).*
 
 ---
 
@@ -59,14 +68,33 @@ I use a bare repository to manage these dotfiles without moving them from `~/.co
 Create an alias so the `config` command can access your bare repository:
 ```bash
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+```
 
 ### 2. Clone the Repository
 Clone the repository metadata into a hidden folder in your home directory:
+```bash
 git clone --bare [https://github.com/Aerhead09/Setup-dotfiles-arch.git](https://github.com/Aerhead09/Setup-dotfiles-arch.git) $HOME/.dotfiles
+```
+
 
 ### 3. Checkout (Deploy Files)
 Deploy the files to your Home directory. If you encounter errors because default files (like .bashrc) already exist, use this emergency backup script:
+```bash
+```
+mkdir -p .dotfiles-backup && \
+config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
+xargs -I{} mv {} .dotfiles-backup/{}
+# Try the checkout again after moving conflicting files
+config checkout
+```
+```
 
-4. Housekeeping
+### 4. Housekeeping
 Prevent Git from tracking every single file in your Home directory:
+```bash
 config config --local status.showUntrackedFiles no
+```
+
+
+# Closing
+Well, that's it for my setup. not flashy like setup in "/unixporn", because i think it is functional enough. Anyway, thank you
